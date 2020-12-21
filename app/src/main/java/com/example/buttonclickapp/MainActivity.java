@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 /** Widgets **/
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         // connect the text view
         textView = (TextView) findViewById(R.id.textView);
         textView.setText("Hello world");
+        textView.setMovementMethod(new ScrollingMovementMethod());
 
         // create our On Click Listener
 //        View.OnClickListener onClickListener = new View.OnClickListener() {
