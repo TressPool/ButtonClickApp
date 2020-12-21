@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
         // connect the text view
         textView = (TextView) findViewById(R.id.textView);
-        textView.setText("Hello world");
+        textView.setText("");
         textView.setMovementMethod(new ScrollingMovementMethod());
 
         // create our On Click Listener
@@ -66,16 +66,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 numTimesClicked ++;
-                String result = "\nThe button got tapped " +numTimesClicked +" times";
-                String result2 = "\nThe button got tapped 1 time";
-                // The first click
-                if(numTimesClicked == 1) {
-                    textView.append(result2);
-                }
-                // all other clicks after
-                else {
-                    textView.append(result);
-                }
+                String result = "The button got tapped " +numTimesClicked +" time";
+                textView.append(result.concat( (numTimesClicked==1)?"\n":"s\n") );
             }
         });
 
